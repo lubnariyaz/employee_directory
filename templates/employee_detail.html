@@ -14,11 +14,16 @@
     
     
     <div class="container pt-5">
-    <div class="card" style="width: 18rem;">
-    <img class="card-img-top" src="..." alt="Card image cap">
+
+    <div class="card mx-auto" style="width: 18rem;">
+    <img class="card-img-top" src="{{ employee.photo.url }}" alt="Employee Photo">
     <div class="card-body">
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <p class="card-text m-0">{{ employee.first_name }} {{ employee.last_name }}</p>
+        <p class="card-text m-0">{{ employee.designation }}</p>
+        <p class="card-text m-0">{{ employee.email_address }}</p>
+        <p class="card-text m-0">{{ employee.phone_number }}</p>
     </div>
+    <a href="{% url 'home' %}" class="btn btn-primary">Back to Home Page</a>
     </div>
 
     </div>
